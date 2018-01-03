@@ -10,4 +10,6 @@ with open('label.pickle', 'rb') as f:
 
 with open('onehot.pickle', 'rb') as f:
     label = pickle.load(f)
-    print(label.transform(integer_encode.reshape(len(integer_encode), 1)))
+    output=label.transform(integer_encode.reshape(len(integer_encode), 1))
+    print(output)
+    print('WORD DIM: '+str(output.shape))

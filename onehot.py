@@ -1,17 +1,18 @@
 import pickle
-
+import data
 from numpy import array
 from numpy import argmax
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 # define example
-dataset = []
-for i in range(0, 195102):
-    try:
-        word = chr(i)
-        dataset.append(word)
-    except:
-        pass
+dataset = data.gen()
+
+# for i in range(0, 195102):
+#     try:
+#         word = chr(i)
+#         dataset.append(word)
+#     except:
+#         pass
 
 # integer encode
 label_encoder = None
